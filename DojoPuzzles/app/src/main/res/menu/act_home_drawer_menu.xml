@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    
+    <group android:checkableBehavior="single">
+        
+        <item
+            android:id="@+id/nav_aboutme"
+            android:checkable="true"
+            android:icon="@drawable/ic_fingerprint"
+            android:title="@string/diamonds" />
+        <item
+            android:id="@+id/nav_education"
+            android:checkable="true"
+            android:icon="@drawable/ic_school"
+            android:title="TODO" />
+        <item
+            android:id="@+id/nav_experience"
+            android:checkable="true"
+            android:icon="@drawable/ic_dev"
+            android:title="TODO" />
+    </group>
+    
+    
+    <group android:checkableBehavior="single">
+        <item android:title="TODO">
+            <menu>
+                <item
+                    android:id="@+id/nav_backend_comm"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_cloud"
+                    android:title="TODO" />
+                
+                <item
+                    android:id="@+id/nav_local_persist"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_storage"
+                    android:title="TODO" />
+                
+                <item
+                    android:id="@+id/nav_architecture_patterns"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_hexagons"
+                    android:title="TODO" />
+                
+                <item
+                    android:id="@+id/nav_agile_methods"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_agile_loop2"
+                    android:title="TODO" />
+            </menu>
+        </item>
+    </group>
+    
+    <group android:checkableBehavior="single">
+        <item android:title="@string/contact">
+            <menu>
+                <item
+                    android:id="@+id/nav_mail"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_email"
+                    android:title="TODO" />
+                <item
+                    android:id="@+id/nav_phone"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_phone_msg"
+                    android:title="TODO" />
+                <item
+                    android:id="@+id/nav_linkedin"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_linkedin_box"
+                    android:title="TODO" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

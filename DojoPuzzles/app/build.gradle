@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android
+        {
+            compileSdkVersion 26
+            defaultConfig
+                    {
+                        applicationId "yuri.kayel.dojopuzzles"
+                        minSdkVersion 21
+                        targetSdkVersion 26
+                        versionCode 1
+                        versionName "1.0"
+                        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+                    }
+            buildTypes
+                    {
+                        release
+                                {
+                                    minifyEnabled false
+                                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                                }
+                    }
+        }
+
+dependencies
+        {
+            //region COMMON
+            testCompile 'junit:junit:4.12'
+            compile 'com.android.support:multidex:1.0.2'
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile "com.google.android.gms:play-services-gcm:11.8.0"
+            //endregion
+            
+            //region SUPPORT LIBRARY
+            compile 'com.android.support:appcompat-v7:26.0.1'
+            compile 'com.android.support:recyclerview-v7:26.0.1'
+            compile 'com.android.support:support-v4:26.0.1'
+            compile 'com.android.support:support-vector-drawable:26.0.1'
+            compile 'com.android.support:design:26.0.1'
+            compile 'com.android.support:appcompat-v7:26.0.1'
+            //endregion
+            
+            //region UX DEPENDENCIES
+            compile 'com.android.support.constraint:constraint-layout:1.0.2'
+            compile 'com.github.arturogutierrez:badges:1.0.5@aar'
+            compile 'com.flaviofaria:kenburnsview:1.0.7'
+            compile 'cyd.awesome.android:awesome-material:1.0'
+            compile 'com.chootdev:csnackbar:1.3.1'
+            compile 'com.afollestad.material-dialogs:core:0.9.4.7'
+            
+            compile 'co.zsmb:materialdrawer-kt:1.1.0'
+            compile 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
+            compile 'com.mikepenz:fontawesome-typeface:4.6.0.3@aar'
+            compile 'com.mikepenz:octicons-typeface:3.0.0.1@aar'
+            compile 'com.mikepenz:crossfader:1.5.0@aar'
+            //endregion
+            
+            //region VOLLEY         https://developer.android.com/training/volley/index.html
+            compile 'com.android.volley:volley:1.0.0'
+            //endregion
+            
+            //region KOTLIN         https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jre8
+            compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jre8', version: '1.2.20'
+            //endregion
+            
+            //region RETROFIT       http://square.github.io/retrofit/
+            //region USE
+//USE            Retrofit retrofit = new Retrofit.Builder()
+//USE                    .baseUrl("https://api.github.com")
+//USE                    .addConverterFactory(GsonConverterFactory.create())
+//USE                    .build();
+//USE
+//USE            GitHubService service = retrofit.create(GitHubService.class);
+            //endregion http://square.github.io/retrofit/
+            compile 'com.squareup.retrofit2:retrofit:2.3.0'
+            compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+            compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+            //endregion
+            
+            compile "org.jetbrains.anko:anko:0.10.1"
+        }
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}

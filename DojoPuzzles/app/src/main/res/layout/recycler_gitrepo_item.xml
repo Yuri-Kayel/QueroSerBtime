@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gitrepo_container"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/gitrepo_thumb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_menu_gallery"
+        android:tint="@color/md_black_1000" />
+
+    <TextView
+        android:id="@+id/gitrepo_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center"
+        android:paddingLeft="16dp"
+        android:text="Hero Name"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
